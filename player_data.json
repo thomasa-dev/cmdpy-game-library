@@ -1,0 +1,19 @@
+{
+    "player_name": "",
+    "stats": {
+        "health": 25,
+        "health_max": 25,
+        "level": 1,
+        "skill_points": 0,
+        "xp": 0,
+        "xp_max": 500
+    },
+    "skills": {
+        "foraging": 1,
+        "lumbering": 1,
+        "craftmanship": 1,
+        "swordsmanship": 1,
+        "forgery": 1,
+        "archery": 1
+    }
+}
