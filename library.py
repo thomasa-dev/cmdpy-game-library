@@ -20,6 +20,12 @@ def save_data(data=json, file=None): # for saving data such as player data
 
     if debug: print(f"Saved data to {file_handle.name}")
 
+def load_data(data=json, file=None): # for loading data such as player data
+    with open(file, 'r') as file_handle:
+        data = json.load(file_handle)
+
+    if debug: print(str(data))
+
 
 # Classes
 
@@ -42,5 +48,33 @@ class Entity(): # STATIC class
         self.name = name
         self.stats = stats
     
-    def death(self, xp, loot_table=Loot_Table):
+    def death(self, loot_table=Loot_Table):
         loot_table.roll()
+
+
+
+class Item(): # STATIC class
+    def __init__(self, name, description, category, manufacturer, level, damage, health_gain):
+        self.name = name
+        self.description = description
+        self.category = category
+        self.manufacturer = manufacturer
+        self.level = level
+        self.damage = damage
+        self.health_gain = health_gain
+
+class Item_Loader(): # STATIC class
+    def __init__(self, items_data = json, items_list=array):
+        for item in items_data:
+
+            items_list.append(Item(
+                item.get('name'),
+                item.get('description'),
+                item.get('category'),
+                item.get('manufacturer'),
+                item.get('level'),
+                item.get('damage'),
+                item.get('health_gain')
+            ))
+        
+        print(items_list)

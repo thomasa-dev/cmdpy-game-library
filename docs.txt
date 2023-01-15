@@ -1,0 +1,9 @@
+========== CMDPY Docs ==========
+Item stats:
+{
+    "description": "This is a template!",
+    "manufacturer": "Manufacturer name here!",
+    "durability": 10,
+    "level": 1,
+    "damage": 10
+}
