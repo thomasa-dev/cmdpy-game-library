@@ -20,7 +20,7 @@ def save_data(data=json, file=None): # for saving data such as player data
 
     if debug: print(f"Saved data to {file_handle.name}")
 
-def load_data(data=json, file=None): # for loading data such as player data
+def load_data(data, file=None): # for loading data such as player data
     with open(file, 'r') as file_handle:
         data = json.load(file_handle)
 
@@ -77,4 +77,4 @@ class Item_Loader(): # STATIC class
                 item.get('health_gain')
             ))
         
-        print(items_list)
+        #print(items_list)

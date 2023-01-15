@@ -29,7 +29,7 @@ class Game(): # INSTANCE class
         player_exp = player_stats["exp"]
         player_exp_max = player_stats["exp_max"]
 
-        os.system("cls")
+        #os.system("cls")
         print("------------ CMDPY Demo ------------")
         print(f'Player Name: {self.Player_STATIC.name}')
         print(f'Player Health: {player_health} / {player_health_max}')
@@ -37,10 +37,16 @@ class Game(): # INSTANCE class
     
     def setup(self):
         print("CMDPY | Loading player...")
+        with open("items.json", "r") as file:
+            items_data = json.load(file)
+            items_list = []
+
+        #library.load_data(items_data, "items.json")
         self.Player_STATIC = Player()
         library.load_data(self.Player_STATIC.info, "player_data.json")
 
         self.main()
+        self.item_loader = library.Item_Loader(items_data, items_list)
 
 
 

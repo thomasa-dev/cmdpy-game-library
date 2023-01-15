@@ -1,0 +1,20 @@
+[
+    {
+            "name": "Sword",
+            "description": "This is a template sword!",
+            "category": "Debug",
+            "manufacturer": "Debug",
+            "level": 0,
+            "damage": 10,
+            "health_gain": 10
+    },
+    {
+        "name": "Sword 2",
+        "description": "This is a template sword!",
+        "category": "Debug",
+        "manufacturer": "Debug",
+        "level": 0,
+        "damage": 10,
+        "health_gain": 10
+    }
+]
